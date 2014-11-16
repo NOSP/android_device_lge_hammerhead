@@ -107,6 +107,15 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.hammerhead
 BOARD_SEPOLICY_DIRS += \
        device/lge/hammerhead/sepolicy
 
+# Disable Modules
+TARGET_KERNEL_NO_MODULES := true
+
+# Kernel
+BUILD_KERNEL := true
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
+TARGET_KERNEL_CONFIG := hammerhead_defconfig
+
 # The list below is order dependent
 BOARD_SEPOLICY_UNION += \
        app.te \
